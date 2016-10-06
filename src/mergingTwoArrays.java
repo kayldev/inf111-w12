@@ -10,11 +10,11 @@ public class mergingTwoArrays {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] a = new int[7];
-		a[0] = 2;
-		a[1] = 4;
-		a[2] = 6;
-		a[3] = 8;
+		int[] a = new int[7],
+					a[0] = 2,
+					a[1] = 4,
+					a[2] = 6,
+					a[3] = 8;
 
 		int[] b = {1, 3, 5};
 
@@ -22,18 +22,18 @@ public class mergingTwoArrays {
 	}
 
 	public static void merge(int[] a, int[] b, int lastA, int lastB){
-		int indexA = lastA - 1; //index of last element in a
-		int indexB = lastB - 1; //index of last element in b
-		int indexMerged = lastB + lastA - 1;
+		int indexA = lastA - 1, //index of last element in a
+		 		indexB = lastB - 1, //index of last element in b
+		 		indexMerged = lastB + lastA - 1;
 
 		/* merge a and b */
 
 		for(int i = 0; i < lastB; i++){
-			a[i + lastA] = b[i];			
+			a[i + lastA] = b[i];
 		}
 
-		int smallest = a[0];
-		int smallestIndex = 0;
+		int smallest = a[0],
+				smallestIndex = 0;
 		for(int i = 0; i < indexMerged; i++){
 			for(int j = i; j < indexMerged; j++){
 				if(smallest < a[j]){
