@@ -33,7 +33,20 @@ public class binarySearchOnArrays {
 
 	}
 
-
+		/**
+		* Binary search is an algorithm by which a key can be searched in an ordered 
+		* list of integers by progressively narrowing the search area with every call.
+		* 
+		* @param arr An array of integers arranged in an increasing order
+		* @param lowerBound The lower bound of the search index, i.e start of the search area
+		* @param upperBound The upper bound of the search index, i.e end of the search area
+		* @param target The element being searched for in arr
+		* Example : 
+		* searchViaBinary([1, 2, 3, 9], 0, 4, 1)
+		* searchViaBinary([1, 2, 3, 9], 0, 1, 1) 
+		* @returns 0, i.e the location of key to caller 
+		* searchViaBinary([1, 2, 3, 9], 0, 4, 1) @returns 0 to caller, here Line#25
+		*/
 
 	public static int searchViaBinary(int[] arr, int lowerBound, int upperBound, int target){
 		if (arr.length == 0 || lowerBound > upperBound){
